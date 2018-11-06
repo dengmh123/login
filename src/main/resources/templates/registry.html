@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        .first{
+            text-align: center;
+        }
+        .second{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+    </style>
+    <script language="JavaScript">
+        function check() {
+            if (form1.username.value==""){
+                alert("输入用户名");
+                form1.username.onfocus();
+                return ;
+            }else if(form1.pwd1.value==""){
+                alert("输入密码");
+                form1.pwd1.onfocus();
+                return;
+            }else if(form1.pwd2.value==""){
+                alert("输入确认密码");
+                form1.pwd2.onfocus();
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="first">
+    <b>
+        注册<br><!--br换行标志  -->
+    </b>
+    <form name="form1" action="register"  method="post" >
+        <p>
+            <label class="second">用户名：</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label class="second">密码：</label>
+            <input type="password" name="pwd1">
+        </p>
+        <p>
+            <label class="second">确认密码：</label>
+            <input type="password" name="pwd2">
+        </p>
+        <p>
+            <label class="second">性别：</label>
+            <input name="sex" type="radio" value="men" checked>男&nbsp
+            <input name="sex" type="radio" value="woman">女
+        </p>
+        <input name="submit" type="submit" value="提交" onclick="check()">
+        <input name="reset" type="reset" value="重置">
+    </form>
+</div>
+<footer>Author:Dmh-Canton</footer>
+</body>
+</html>
